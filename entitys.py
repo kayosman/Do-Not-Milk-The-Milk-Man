@@ -1,6 +1,6 @@
 class Entity:
-	def __init__(self, name)
-	self.name = name
+	def __init__(self, name):
+	    self.name = name
 
 	def changeName(self, newName):
 		print("            		/", 
