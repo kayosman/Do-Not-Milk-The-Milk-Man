@@ -5,24 +5,23 @@ from entitys import *
 
 
 def disclaimer():  # sourcery skip: remove-redundant-if
-    print("This game WILL contain"
-          "very sensitive topics such as"
-          "KILLING, PROFANITY, DEGENERACY, SEX etc"
-          "By typing yes you are agreeing that you are aware of what you're getting into and you are agreeing to this"
-          "experience")
+    print("This game WILL contain "
+          "very sensitive topics such as "
+          "KILLING, PROFANITY, DEGENERACY, SEX etc "
+          "By typing yes you are agreeing that you are aware of what you're getting into and you are agreeing to this "
+          "experience ")
     x = input("-> ")
-    if x == "YES" or "yes" or "ye" or "y" or "ard":
+    if x == "yes" or "y":
         return True
-    elif x == "NO" or "no" or "n" or "nah":
-        return False
-    return True
+    elif x == "no":
+        sys.exit(0)
+    else:
+        print("type (yes) or (no)")
+        return disclaimer()
 
 
 def preGameStart():
-    disclaimer()
-    if not disclaimer():
-        return sys.exit(0)
-    print("Start G")
+    print("Start Game")
 
 
 def newGameStart():
@@ -33,7 +32,9 @@ def newGameStart():
 
 
 def main():
-    pass
+    disclaimer()
+    preGameStart()
+    newGameStart()
 
 
 if __name__ == '__main__':
