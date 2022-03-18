@@ -1,7 +1,3 @@
-def isEvil(entity):
-    return bool(entity)
-
-
 class Entity:
     def __init__(self, name, evil):
         self.name = name
@@ -9,11 +5,24 @@ class Entity:
 
     def changeName(self, newName):
         self.name = newName
+    
+    def isEvil(self):
+        return self.evil
 
 
 class Player(Entity):
-    pass
-    # def __init__(self, name, evil):
-    #     super().__init__(name, evil)
-    #     self.name = name
+    def __init__(self, health):
+        self.health = health
+        self._health = health
+        
+    def die(self):
+        def isAlive(self):
+            if(self.health <= self._health):
+                return False
+        isAlive()
+        if(self.isAlive() == False):
+            print("You Died")   
 
+class monsters(Entity):
+    pass
+        
