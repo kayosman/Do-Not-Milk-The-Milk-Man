@@ -2,12 +2,17 @@
 import os
 import sys
 from entitys import *
+from Weapons import *
 
 def main():
     pass
 
 if __name__ == '__main__':
-    monster = monsters("Maria", True)
-    print(f"moster name: {monster.name} and {monster.evil}")
-    monster.changeName("Trent")
-    print(f"moster name: {monster.name} and {monster.evil}")
+    player = Player("Bob", True, 100, 1, 0)
+    print(player.level)
+    player.exp = 100000
+    player.levelUp()
+    print(player.level)
+    sword = Sword("Sword", 1, 1)
+    sword.generateStats()
+    print(sword)
