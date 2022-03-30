@@ -11,15 +11,15 @@ class Entity:
 
 
 class Player(Entity):
-    def __init__(self, name, evil, health, level, exp):
+    def __init__(self, name="Person", evil=False, health=100, level=1, exp=0):
         super().__init__(name, evil)
         self.health = health
         self._health = health
         self.level = level
         self.exp = exp
-        
-    def getLevel(self):
-        return self.level
+    @staticmethod
+    def getLevel():
+        return Player.level
     
     def setLevel(self, newLevel):
         self.level = newLevel

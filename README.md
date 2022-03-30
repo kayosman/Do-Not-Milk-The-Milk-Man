@@ -1,8 +1,8 @@
 # Do Not Milk The Milk Man
-## - Requirements
+### - Requirements
 ```
 python3
 ```
-### Run 'main.py'
+#### Run 'main.py'
 
 # NOT CURRENTLY FUNCTIONAL
