@@ -17,9 +17,9 @@ class Player(Entity):
         self._health = health
         self.level = level
         self.exp = exp
-    @staticmethod
-    def getLevel():
-        return Player.level
+    
+    def getLevel(self):
+        return self.level
     
     def setLevel(self, newLevel):
         self.level = newLevel
