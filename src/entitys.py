@@ -1,19 +1,23 @@
 import random
 
 class Entity:
-    def __init__(self, name, evil):
+    def __init__(self, name, health, evil):
         self.name = name
         self.evil = evil
+        self.health = health
+        self._health = health
 
     def isEvil(self):
         return self.evil
+    
+    def randomNumber(self, value):
+        randNum = random.randint(0, value)
+        return randNum
 
 
 class Player(Entity):
-    def __init__(self, name="Person", evil=False, health=100, level=1, exp=0):
-        super().__init__(name, evil)
-        self.health = health
-        self._health = health
+    def __init__(self, level=1, exp=0):
+        super().__init__(name="Player", health=100, evil=False)
         self.level = level
         self.exp = exp
     
@@ -44,6 +48,7 @@ class Player(Entity):
         if(self.exp >= levelCap):
             self.level += 1
             self.health += healthMultiplier
+        
             
 class Monster(Entity):
     def __init__(self, name= "Monster", evil=True, level=1):
@@ -135,10 +140,19 @@ class Monster(Entity):
                            "The Ravaging World Owl"]
         
         if(self.level <= 10):
-            x = random.choice(__lowLevelNames)
-            self.name = x
+            randomName = random.choice(__lowLevelNames)
+            self.name = randomName
         elif(self.level <= 50):
-            x = random.choice(__midLevelNames)
-            self.name = x
-    
-    
+            randomName = random.choice(__midLevelNames)
+            self.name = randomName
+        
+        
+class Human(Entity):
+    def __init__(self, name="Human", health=100, evil=False, fear=0, happyness=0):
+        super().__init__(name, health, evil)
+        self.fear = fear
+        self.happyness = happyness
+                
+    def generatePersonality(self):
+        self.fear = self.randomNumber(100)
+        self.happyness = self.randomNumber(100)

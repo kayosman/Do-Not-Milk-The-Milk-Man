@@ -6,24 +6,12 @@ from Weapons import *
 import time
 
 def main():
-    pass
+    person = Human()
+    person.generatePersonality()
+    print(f"{person.happyness} {person.fear}")
 
 if __name__ == '__main__':
-    x = 0
-    monster = Monster()
-    while(x < 10):
-        monster.generateMonsterName()
-        print(f"{monster.name} {monster.level}")
-        x += 1
-    thicc = Monster()
-    while(x < 20):
-        thicc.level = 45
-        thicc.generateMonsterName()
-        print(f"{thicc.name} {thicc.level}")
-        x += 1
-    
-    
-    
+    main()
     
     
     
