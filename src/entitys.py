@@ -1,3 +1,4 @@
+from dialoge import *
 import random
 
 class Entity:
@@ -147,12 +148,29 @@ class Monster(Entity):
             self.name = randomName
         
         
-class Human(Entity):
-    def __init__(self, name="Human", health=100, evil=False, fear=0, happyness=0):
+class Human(Entity, Dialoge):
+    def __init__(self, name="Human", health=100, evil=False, fear=0, happyness=0, sexyness=0, kindness=0, anger=0, rebellious=0, slutyness=0, love=0, faith=0):
         super().__init__(name, health, evil)
         self.fear = fear
         self.happyness = happyness
-                
+        self.sexyness = sexyness
+        self.kindness = kindness
+        self.anger = anger
+        self.rebellious = rebellious
+        self.slutyness = slutyness
+        self.love = love
+        self.faith = faith
+        
     def generatePersonality(self):
         self.fear = self.randomNumber(100)
         self.happyness = self.randomNumber(100)
+        self.sexyness = self.randomNumber(100)
+        self.kindness = self.randomNumber(100)
+        self.anger = self.randomNumber(100)
+        self.rebellious = self.randomNumber(100)
+        self.slutyness = self.randomNumber(100)
+        self.love = self.randomNumber(100)
+        self.faith = self.randomNumber(100)
+        if(self.faith <= 100):
+            pass
+        self.anger = math.
