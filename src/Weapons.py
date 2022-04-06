@@ -598,7 +598,6 @@ class Spear(Weapons):
         return self.level
     
     def generateStats(self):
-        
         damageMultiplier = random.randrange(1,3)
         if(math.floor(random.randrange(1, 100)) <= 25):
             if(random.randrange(1, 100) < 5):

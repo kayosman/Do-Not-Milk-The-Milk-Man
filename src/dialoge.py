@@ -1,5 +1,5 @@
 from entitys import *
 
-class Dialoge:
+class Dialoge(Human):
     def __init__(self):
         pass
