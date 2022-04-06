@@ -151,20 +151,20 @@ class Monster(Entity):
         
 class Human(Entity):
     def __init__(self, 
-                 firstName="Human", 
-                 lastName="Person",
-                 health=100,
-                 evil=False,
-                 gender="male",
-                 fear=0,
-                 happyness=0, 
-                 sexyness=0, 
-                 kindness=0, 
-                 anger=0, 
-                 rebellious=0, 
-                 slutyness=0, 
-                 love=0, 
-                 faith=0):
+                 firstName = "Human", 
+                 lastName  = "Person",
+                 health    = 100,
+                 evil      = False,
+                 gender    = "male",
+                 fear      = 0,
+                 happyness = 0, 
+                 sexyness  = 0, 
+                 kindness  = 0, 
+                 anger     = 0, 
+                 rebellious= 0, 
+                 slutyness = 0, 
+                 love      = 0, 
+                 faith     = 0):
 
         super().__init__(health, evil)
         
