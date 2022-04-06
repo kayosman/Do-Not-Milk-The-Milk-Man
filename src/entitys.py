@@ -197,8 +197,8 @@ class Human(Entity):
             self.rebellious -= 80
             self.kindness   += 40
             self.fear       += 20
-            if(  self.slutyness   <=  0):
-                 self.slutyness   ==  0
+            if(  self.slutyness  <=   0):
+                 self.slutyness  ==   0
             elif(self.slutyness   > 100):
                 self.slutyness    = 100
             if( self.rebellious  <=   0):
